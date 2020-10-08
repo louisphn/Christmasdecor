@@ -1,0 +1,393 @@
+<!DOCTYPE html!>
+<html>
+<head>
+  <title>Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="http://allfont.net/allfont.css?fonts=league-spartan" rel="stylesheet" type="text/css" />
+   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+   <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+   <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+</head>
+<style>
+.footer {background:white;}
+.footer_list > ul li {color:black;}
+.footer_title {color:	#DA2352;}
+.topnav {
+  width:100%;
+  background-color: white;
+  overflow: hidden;
+  position:fixed;
+  z-index:1;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+.topnav div a{
+  margin-top:2%;
+}
+/* Change the color of links on hover */
+.topnav div a:hover {
+  background-color: #954535;
+  color: white;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #954535;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  margin-top:20%;
+  display: none;
+}
+
+@media only screen and (max-width: 697px) {
+	 .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+    width: 70%;}
+	.topnav.responsive a.icon {
+	    position: absolute;
+	    top: -10%;
+	    left: 60%;
+	}
+}
+@media screen and (max-width: 1038px) {
+  .topnav div a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1038px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 5%;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    margin:0;
+  }
+}
+
+/*============ Service Features style ============*/
+.service-heading-block{
+	display:block;
+	margin-bottom:30px;
+	}
+.title {
+  color:black;
+  display: block;
+  font-size: 30px;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 24px;
+}
+.feature-block {
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 15px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  margin-bottom: 15px;
+  transition:all ease .5s
+}
+.ms-feature:hover,
+.ms-feature:focus {
+  background-color: #fafafa;
+  box-shadow: 0 3px 4px 3px rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 3px rgba(0, 0, 0, 0.12);
+}
+.fb-icon {
+  border-radius: 50%;
+  display: block;
+  font-size: 36px;
+  height: 80px;
+  line-height: 80px;
+  text-align:center;
+  margin:1rem auto;
+  width: 80px;
+  transition: all 0.5s ease 0s;
+}
+.btn-info {
+  color:#fff;
+  background-color:#146B3A;
+}
+.btn-info:hover {
+  color:#fff;
+  background-color:#146B3A;
+  -webkit-filter: brightness(120%);
+}
+.btn-info:not(:disabled):not(.disabled):active {
+  color: #fff;
+  background-color: #146B3A;
+  border-color: #4c9f70;
+}
+
+.btn-info.focus, .btn-info:focus {
+    box-shadow: 0 0 0 0.2rem rgba(76, 159, 112, 1);
+}
+
+.btn-warning {
+  background-color: #F8B229;
+  color: #fff;
+}
+
+.btn-warning:hover {
+    color:#fff;
+    background-color:#F8B229;
+    -webkit-filter: brightness(120%);
+}
+.btn-success {
+  background-color: #BB2528;
+  color: #fff;
+}
+.btn-success:hover {
+  background-color: #BB2528;
+  color: #fff;
+  -webkit-filter: brightness(120%);
+}
+
+.btn-success:not(:disabled):not(.disabled):active {
+  color: #fff;
+  background-color: #BB2528;
+  border-color: #D6484C;
+}
+
+.btn-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(248, 122, 125, 1);
+}
+
+.btn-danger{
+  background-color:#EA4630;
+  color:#fff;
+}
+
+.btn-danger:hover {
+  background-color: #EA4630;
+  color: #fff;
+  -webkit-filter: brightness(120%);
+}
+.btn-danger:not(:disabled):not(.disabled):active {
+  color: #fff;
+  background-color: #EA4630;
+  border-color: #ff9082;
+}
+
+
+.feature-block h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 3rem 0 1rem;
+}
+.color-info {
+  color: #146B3A;
+}
+.color-warning {
+  color: #F8B229;
+}
+.color-success {
+  color: #BB2528;
+}
+.color-danger {
+  color: #EA4630;
+}
+.btn-custom{
+  border: medium none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin: 10px 1px;
+  outline: 0 none;
+  padding: 8px 30px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.card-img-top {
+    width: 100%;
+    height: 18vw;
+    object-fit: cover;
+}
+</style>
+
+<body>
+  <div class="topnav" id="myTopnav">
+		<a href="index.html" style="font-family: 'Arimo';font-size: 34px; font-weight: bold; color:#954535;">CHRISTMAS<span style="color:black;">Decor</span></a>
+	<div style="float:right;">
+		<a href="index.html">HOME</a>
+		<a href="products.html">PRODUCTS</a>
+		<a href="service.html">SERVICES</a>
+		<a href="contact.html">CONTACT US</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+	</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css"/>
+<div class="container text-center">
+          <div class="row">
+
+             <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="service-heading-block">
+                <h2 class="text-center title" style="font-weight:bold; font-size: 38px;">Services For The Holidays &amp; Beyond</h2>
+                <p class="text-center sub-title">Being the premier, full time, professional Christmas light/display installation company in North America, we have had the privilege of having thousands of loyal clients return to us each year for their festive, holiday lighting and displays.
+
+<br/>  We use our own products to ensure that you are getting the most dependable and professional level equipment available.</p>
+            </div>
+             </div>
+             <br>
+             <Br>
+               <br>
+               <br>
+               <br>
+               <br>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+              <div class="text-center feature-block flex-fill">
+                <img class="card-img-top" src="images\service1.jpg" with=100%;>
+                <h4 class="color-info">Complete Installation</h4>
+                <p class="">We will work closely with you to
+                  arrange a convenient installation date. Our uniformed, professional
+                  installers approach each project as a unique creation, because it is!
+                  We will transform your vision into reality quickly  and efficiently.
+                  We can’t wait to see the expression on your face when the installation is complete and your design is revealed.
+                  Our work has brought smiles to thousands of faces over the years and we look forward to creating many more in the future.</p>
+                <a href="javascript:void(0)" class="mt-auto btn btn-info btn-custom">Click here</a>
+             </div>
+           </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+             <div class="text-center feature-block flex-fill">
+                  <img class="card-img-top" src="images\service2.jpg">
+                <h4 class="color-warning card-title">Timely Takedown</h4>
+                <p class="" style="margin-top:15%;">It’s a sad fact to face, but every year the holiday season draws to a close.
+                  Some want holiday decorations removed right away, while others may prefer to keep everything up a little longer.
+                  No matter when you choose to have the season’s lighting and displays taken down, our professional crews will come
+                  back and carefully remove all decorations in the same expert fashion that you enjoyed when they first installed them.</p>
+                <a href="javascript:void(0)" class="mt-auto btn btn-warning btn-custom">Click here</a>
+            </div>
+          </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+              <div class="text-center feature-block flex-fill">
+                  <img class="card-img-top" src="images\service3.jpg">
+                <h4 class="color-success">Proactive Maintenance</h4>
+                <p class="">When it comes to maintaining your holiday lights and displays, we leave nothing to chance.
+                  We never want you to find yourself with burned out bulbs or less than perfect displays anytime during the holiday season.
+                  That is why we are proactive about holiday decoration maintenance. We commit to making at least 2 service
+                  visits at your property during the holiday season to ensure that everything is functioning as it should.
+                  You can rest assured that the display we install for you will look its best day after day during the magical holiday season.</p>
+                <a href="javascript:void(0)" class="mt-auto btn btn-success btn-custom">Click here</a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+              <div class="text-center feature-block flex-fill">
+                  <img class="card-img-top" src="images\service4.png">
+                <h4 class="color-danger">Design Consultation</h4>
+                <p class="">We start the process of creating holiday magic by
+                  first listening to your unique ideas and perspective. From
+                  there, our design professionals will evaluate and map your
+                  property so that we can highlight all   aspects of its special
+                  features. We will guide you through every step of the design process
+                  and will continue to seek your input as it progresses.
+                  We want your holiday light display to be everything you imagined.  After all, Christmas is all about magic!</p>
+                <a href="javascript:void(0)" class="mt-auto btn btn-danger btn-custom">Click here</a>
+              </div>
+            </div>
+    </div>
+    <br>
+    <br>
+    <Br>
+  <hr>
+    <footer class="footer">
+  		<div class="footer_content">
+  			<div class="container">
+  				<div class="row">
+  					<div class="col">
+  						<div class="footer_logo text-center"><a href="#"><a style="font-family: 'Arimo';font-size: 34px; font-weight: bold; color:#DA2352;">CHRISTMAS<span style="color:black;">Decor</span></a></a></div>
+  					</div>
+  				</div>
+  				<div class="row footer_row">
+  					<div class="col-lg-4 footer_col">
+  						<div class="footer_item text-center">
+  							<div class="footer_icon d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+  								<div><img src="images/phone.png" alt=""></div>
+  							</div>
+  							<div class="footer_title">talk to us</div>
+  							<div class="footer_list">
+  								<ul>
+  									<li>+34 5667 4332 244</li>
+  									<li>+224 667 889</li>
+  								</ul>
+  							</div>
+  						</div>
+  					</div>
+  					<div class="col-lg-4 footer_col">
+  						<div class="footer_item text-center">
+  							<div class="footer_icon d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+  								<div><img src="images/mail.png" alt=""></div>
+  							</div>
+  							<div class="footer_title">e-mail</div>
+  							<div class="footer_list">
+  								<ul>
+  									<li>Contact@christmasdecor.com</li>
+  									<li>office@christmasdecor.com</li>
+  								</ul>
+  							</div>
+  						</div>
+  					</div>
+  					<div class="col-lg-4 footer_col">
+  						<div class="footer_item text-center">
+  							<div class="footer_icon d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+  								<div><img src="images/contact.png" alt=""></div>
+  							</div>
+  							<div class="footer_title">location</div>
+  							<div class="footer_list">
+  								<ul>
+  									<li>350-1102, 1-chome-1-13-1 Matobakita</li>
+  									<li>Kawagoe-shi, Saitama-ken</li>
+                    <li>Japan</li>
+  								</ul>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</footer>
+<script src="a1.js"></script>
+</body>
+</html>

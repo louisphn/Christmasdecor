@@ -1,0 +1,2839 @@
+<!DOCTYPE html!>
+<html>
+<head>
+  <title>Products</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="http://allfont.net/allfont.css?fonts=league-spartan" rel="stylesheet" type="text/css" />
+   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+   <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="a2.js"></script>
+  <script src="shoppingcart.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+</head>
+
+<style>
+.footer
+{
+	background: white;
+}
+.footer_content
+{
+	padding-top: 99px;
+	padding-bottom: 30px;
+}
+.footer_logo a
+{
+	display: inline-block;
+	position: relative;
+}
+.footer_bar
+{
+	height: 56px;
+}
+.copyright
+{
+	font-size: 11px;
+	font-weight: 700;
+	color: #443586;
+}
+.footer_row
+{
+	margin-top: 59px;
+}
+.footer_icon
+{
+	width: 95px;
+	height: 95px;
+	border-radius: 50%;
+}
+.footer_icon > div
+{
+	width: 42px;
+	height: 42px;
+}
+.footer_icon > div img
+{
+	max-width: 100%;
+	max-height: 100%;
+}
+.footer_title
+{
+	margin-top: 33px;
+	font-size: 16px;
+	font-weight: 700;
+	color:	#DA2352;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	line-height: 1.2;
+}
+.footer_list
+{
+	margin-top: 25px;
+  margin-left:-7%;
+}
+.footer_list ul li:not(:last-of-type)
+{
+	margin-bottom: 15px;
+}
+.footer_list ul li
+{
+	font-size: 14px;
+	font-weight: 700;
+	color: black;
+	text-transform: uppercase;
+  text-decoration:none;
+  list-style:none;
+}
+.topnav {
+  width:100%;
+  background-color: white;
+  overflow: hidden;
+  position:fixed;
+  z-index:1;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+.topnav div a{
+  margin-top:2%;
+}
+/* Change the color of links on hover */
+.topnav div a:hover {
+  background-color: #954535;
+  color: white;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #954535;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  margin-top:20%;
+  display: none;
+}
+
+@media screen and (max-width: 1038px) {
+  .topnav div a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1038px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0%;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    margin:0;
+  }
+}
+
+  /*Display horizontal unordered list*/
+  #menu{margin-left:0;}
+  ul#menu li {
+    display:inline;
+    margin-left: 0;
+  }
+
+  ul#menu a:hover {background-color: #954535;
+  color: white;}
+
+  ul#menu a
+  {float: left;
+  color: black;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  }
+  .MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+      .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+          .MultiCarousel .MultiCarousel-inner .item { float: left;}
+          .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:white; color:#666;}
+      .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+      .MultiCarousel .leftLst { left:0; }
+      .MultiCarousel .rightLst { right:0; }
+
+          .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
+          .container {
+              width: 100%;
+              padding-right: 15px;
+              padding-left: 15px;
+              margin-right: auto;
+              margin-left: auto;
+          }
+          @media (min-width: 576px) {
+            .container {
+                max-width: 90%;
+            }
+          }
+
+          @media (min-width: 768px) {
+            .container {
+                max-width: 90%;
+            }
+          }
+
+          @media (min-width: 992px) {
+            .container {
+                max-width: 90%;
+            }
+          }
+
+          @media (min-width: 1200px) {
+            .container {
+              max-width: 90%;
+          }
+        }
+        .helper {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+/*lightbox*/
+.modal {
+  display: none; /* changed to flex from none*/
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 95%;
+  max-width: 1400px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: left;
+  background-color: white;
+  padding: 2px 16px;
+  color: black;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*flex box */
+.flex-container {
+  display: flex;
+  align-items: stretch;
+  align-content: space-around;
+  justify-content: center;
+}
+
+.flex-container2 {
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+}
+
+/*circles inside flexbox */
+.circle1 {
+  background-color: grey;
+    width: 20px;
+    height: 20px;
+    margin: 0.5em;
+    border-radius: 1000px;
+}
+
+.circle2 {
+  background-color: darkred;
+  width: 20px;
+    height: 20px;
+    margin: 0.5em;
+    border-radius: 1000px;
+}
+
+.circle3 {
+  background-color: black;
+  width: 20px;
+    height: 20px;
+    margin: 0.5em;
+    border-radius: 1000px;
+}
+.circle:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.caption {
+  font-family: 'lato';
+  font-size: 17.9px;
+}
+
+
+/*footer */
+div#footer {
+	position:relative; display:flex; width:100%; height:180px; margin: auto;
+	background-color:#bb2528; color:white;
+}
+#contactInfo { position:absolute; margin: auto; left:100px; top:20px; font-size:30px; }
+#physicalLocation { position: absolute; margin: auto left:130px; top:70px; font-size:20px; }
+#telAndMail { position:absolute; left:420px; margin: auto; top:70px; font-size:20px; }
+#termsAndConditionsThingy { position:absolute; margin: auto; display:flex; right:50px; bottom:10px; font-size:20px; cursor:pointer; }
+.footerLink { border-right:1px solid rgb(150, 150, 150); margin: auto; padding:0 10px 0 10px; }
+#contactUsLink { border-right:none }
+.shop-item-title {
+  font-family: 'lato', arial;
+  font-size:20.5px;
+  text-align:left;
+}
+
+/*shopping cart related */
+.shop-item-price {
+  font-family: 'League Spartan';,
+  font-size: 32px;
+  text-align: left;
+  flex-grow: 1;
+  color: black;
+}
+.shop-item-button {
+  background-color: darkred;
+}
+.shop-item-button:hover {
+  background-color: #CC4C4C;
+}
+
+
+.shop-item {
+    margin: 30px;
+}
+
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-dangerer {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-dangerer:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+    background-color: darkred
+}
+.btn-purchase:hover {
+  background-color: #CC4C4C;
+}
+
+
+</style>
+
+<body>
+  <div class="topnav" id="myTopnav">
+		<a href="index.html" style="font-family: 'Arimo';font-size: 34px; font-weight: bold; color:#954535;">CHRISTMAS<span style="color:black;">Decor</span></a>
+	<div style="float:right;">
+		<a href="index.html">HOME</a>
+		<a href="products.html">PRODUCTS</a>
+		<a href="service.html">SERVICES</a>
+		<a href="contact.html">CONTACT US</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+	</div>
+<br>
+<br>
+<br>
+<br>
+<ul id="menu">
+  <div class="tab">
+	<li><a href="javascript:rudrSwitchTab('tb_1', 'content_1');" id="tb_1" class="tabmenu active">RECOMMENDED</a></li>
+	<li><a href="javascript:rudrSwitchTab('tb_2', 'content_2');" id="tb_2" class="tabmenu">BEST SELLERS</a></li>
+  <li><a href="javascript:rudrSwitchTab('tb_3', 'content_3');" id="tb_2" class="tabmenu">NEW ARRIVALS</a></li>
+ </div>
+</ul>
+<br>
+<br>
+<div id="content_1" class="tabcontent">
+	  <div class="container">
+    	<div class="row">
+                <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+                        <div class="MultiCarousel-inner">
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center;"><img src="images/1.png" width="100%"
+                                        onclick="openModal();currentSlide(1)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 299</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/18.png" width="100%;"
+                                        onclick="openModal();currentSlide(2)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC1</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 350</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/7.png" width="100%"
+                                        onclick="openModal();currentSlide(3)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC2</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 499</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/5.png" width="100%"
+                                        onclick="openModal();currentSlide(4)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC3</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 299</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/7.png" width="100%"
+                                        onclick="openModal();currentSlide(5)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC4</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 350</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/6.png" width="100%"
+                                        onclick="openModal();currentSlide(6)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC5</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 199</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/14.png" width="100%"
+                                        onclick="openModal();currentSlide(7)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC6</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 250</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/17.png" width="100%"
+                                        onclick="openModal();currentSlide(8)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC7</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 499</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/1.png" width="100%"
+                                        onclick="openModal();currentSlide(9)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC8</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 379</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/17.png" width="100%"
+                                        onclick="openModal();currentSlide(10)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC9</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 429</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                  <div class="pad15">
+                                    <div style="text-align: center"><img src="images/14.png" width="100%"
+                                        onclick="openModal();currentSlide(11)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC10</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 285</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/15.png" width="100%"
+                                        onclick="openModal();currentSlide(12)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC11</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 99</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/7.png" width="100%"
+                                        onclick="openModal();currentSlide(13)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC12</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 320</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/17.png" width="100%"
+                                        onclick="openModal();currentSlide(14)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC13</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 700</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/15.png" width="100%"
+                                        onclick="openModal();currentSlide(15)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC14</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 499</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/16.png" width="100%"
+                                        onclick="openModal();currentSlide(16)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC15</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 549</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-dangerer leftLst"> < </button>
+                        <button class="btn btn-dangerer rightLst">></button>
+                    </div>
+                 </div>
+        <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+                   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                   <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                  <div class="mySlides">
+                    <div class="numbertext">1 / 16</div>
+                    <!--flex box-->
+                    <div class="flex-container">
+                      <div style="flex-basis: 3000px;">
+                          <img class="shop-item-image" src="images/1.png" style="width: 100%">
+                    </div>
+                    <!--caption text and flex box-->
+                    <div style="flex-shrink: 1">
+                    <div class="caption-container">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                      <!--name and description of product-->
+                      <span class="shop-item-title"> BAC </span>
+                      <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                      <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <!-- color of product-->
+                        <div class="flex-container2">
+                      <div class="circle1"></div>
+                      <div class="circle2"></div>
+                      <div class="circle3"></div>
+                      </div>
+                      <!--Cost of product-->
+                      <span class="shop-item-price"> $299 </span><br>
+                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+
+                    </div>
+                    </div>
+                   </div>
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">2 / 16</div>
+                    <div class="flex-container">
+                        <div style="flex-basis: 3000px;">
+                            <img class="shop-item-image" src="images/18.png" style="width: 100%">
+                      </div>
+                      <!--caption text and flex box-->
+                      <div style="flex-shrink: 1">
+                      <div class="caption-container">
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                        <!--name and description of product-->
+                        <span class="shop-item-title"> BAC1 </span>
+                        <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                        <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                          sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                          <!-- color of product-->
+                          <div class="flex-container2">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                        </div>
+                        <!--Cost of product-->
+                        <span class="shop-item-price"> $350 </span><br>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                      </div>
+                      </div>
+                     </div>
+                    </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">3 / 16</div>
+                    <div class="flex-container">
+                            <div style="flex-basis: 3000px;">
+                                <img class="shop-item-image" src="images/7.png" style="width: 100%">
+                               </div>
+                               <!--caption text and flex box-->
+                               <div style="flex-shrink: 1">
+                               <div class="caption-container">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                      <!--name and description of product-->
+                      <span class="shop-item-title"> BAC2 </span>
+                      <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                      <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <!-- color of product-->
+                        <div class="flex-container2">
+                      <div class="circle1"></div>
+                      <div class="circle2"></div>
+                      <div class="circle3"></div>
+                      </div>
+                      <!--Cost of product-->
+                      <span class="shop-item-price"> $499 </span><br>
+                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                      </div>
+                      </div>
+                     </div>
+                    </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">4 / 16</div>
+                    <div class="flex-container">
+                            <div style="flex-basis: 3000px;">
+                                <img class="shop-item-image" src="images/5.png" style="width: 100%">
+                               </div>
+                               <!--caption text and flex box-->
+                               <div style="flex-shrink: 1">
+                               <div class="caption-container">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                          <!--name and description of product-->
+                          <span class="shop-item-title"> BAC3 </span>
+                          <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                          <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <!-- color of product-->
+                            <div class="flex-container2">
+                          <div class="circle1"></div>
+                          <div class="circle2"></div>
+                          <div class="circle3"></div>
+                          </div>
+                          <!--Cost of product-->
+                          <span class="shop-item-price"> $499 </span><br>
+                          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                      </div>
+                      </div>
+                     </div>
+                    </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">5 / 16</div>
+                    <div class="flex-container">
+                            <div style="flex-basis: 3000px;">
+                                    <img class="shop-item-image" src="images/7.png" style="width: 100%">
+                               </div>
+                               <!--caption text and flex box-->
+                               <div style="flex-shrink: 1">
+                               <div class="caption-container">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                          <!--name and description of product-->
+                          <span class="shop-item-title"> BAC4 </span>
+                          <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                          <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <!-- color of product-->
+                            <div class="flex-container2">
+                          <div class="circle1"></div>
+                          <div class="circle2"></div>
+                          <div class="circle3"></div>
+                          </div>
+                          <!--Cost of product-->
+                          <span class="shop-item-price"> $299 </span><br>
+                          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                      </div>
+                      </div>
+                     </div>
+                    </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">6 / 16</div>
+                    <div class="flex-container">
+                            <div style="flex-basis: 3000px;">
+                                <img class="shop-item-image" src="images/6.png" style="width: 100%">
+                               </div>
+                               <!--caption text and flex box-->
+                               <div style="flex-shrink: 1">
+                               <div class="caption-container">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                          <!--name and description of product-->
+                          <span class="shop-item-title"> BAC5 </span>
+                          <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                          <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <!-- color of product-->
+                            <div class="flex-container2">
+                          <div class="circle1"></div>
+                          <div class="circle2"></div>
+                          <div class="circle3"></div>
+                          </div>
+                          <!--Cost of product-->
+                          <span class="shop-item-price"> $350 </span><br>
+                          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                      </div>
+                      </div>
+                     </div>
+                    </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">7 / 16</div>
+                    <div class="flex-container">
+                            <div style="flex-basis: 3000px;">
+                                <img class="shop-item-image" src="images/14.png" style="width: 100%">
+                               </div>
+                               <!--caption text and flex box-->
+                               <div style="flex-shrink: 1">
+                               <div class="caption-container">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                          <!--name and description of product-->
+                          <span class="shop-item-title"> BAC6 </span>
+                          <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                          <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <!-- color of product-->
+                            <div class="flex-container2">
+                          <div class="circle1"></div>
+                          <div class="circle2"></div>
+                          <div class="circle3"></div>
+                          </div>
+                          <!--Cost of product-->
+                          <span class="shop-item-price"> 199 </span><br>
+                          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                      </div>
+                      </div>
+                     </div>
+                    </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">8 / 16</div>
+                    <div class="flex-container">
+                            <div style="flex-basis: 3000px;">
+                                <img class="shop-item-image" src="images/17.png" style="width: 100%">
+                               </div>
+                               <!--caption text and flex box-->
+                               <div style="flex-shrink: 1">
+                               <div class="caption-container">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                          <!--name and description of product-->
+                          <span class="shop-item-title"> BAC7 </span>
+                          <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                          <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <!-- color of product-->
+                            <div class="flex-container2">
+                          <div class="circle1"></div>
+                          <div class="circle2"></div>
+                          <div class="circle3"></div>
+                          </div>
+                          <!--Cost of product-->
+                          <span class="shop-item-price"> 250 </span><br>
+                          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                      </div>
+                      </div>
+                     </div>
+                    </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">9 / 16</div>
+                    <div class="flex-container">
+                            <div style="flex-basis: 3000px;">
+                                <img class="shop-item-image" src="images/1.png" style="width: 100%">
+                               </div>
+                               <!--caption text and flex box-->
+                               <div style="flex-shrink: 1">
+                               <div class="caption-container">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                          <!--name and description of product-->
+                          <span class="shop-item-title"> BAC8 </span>
+                          <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                          <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <!-- color of product-->
+                            <div class="flex-container2">
+                          <div class="circle1"></div>
+                          <div class="circle2"></div>
+                          <div class="circle3"></div>
+                          </div>
+                          <!--Cost of product-->
+                          <span class="shop-item-price"> $499 </span><br>
+                          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                      </div>
+                      </div>
+                     </div>
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">10 / 16</div>
+                      <div class="flex-container">
+                              <div style="flex-basis: 3000px;">
+                                  <img class="shop-item-image" src="images/17.png" style="width: 100%">
+                                 </div>
+                                 <!--caption text and flex box-->
+                                 <div style="flex-shrink: 1">
+                                 <div class="caption-container">
+                              <br>
+                              <br>
+                              <br>
+                              <br>
+                            <!--name and description of product-->
+                            <span class="shop-item-title"> BAC9 </span>
+                            <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                            <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                              sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                              <!-- color of product-->
+                              <div class="flex-container2">
+                            <div class="circle1"></div>
+                            <div class="circle2"></div>
+                            <div class="circle3"></div>
+                            </div>
+                            <!--Cost of product-->
+                            <span class="shop-item-price"> $429 </span><br>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                        </div>
+                       </div>
+                      </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">11 / 16</div>
+                    <div class="flex-container">
+                            <div style="flex-basis: 3000px;">
+                                <img class="shop-item-image" src="images/14.png" style="width: 100%">
+                               </div>
+                               <!--caption text and flex box-->
+                               <div style="flex-shrink: 1">
+                               <div class="caption-container">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                          <!--name and description of product-->
+                          <span class="shop-item-title"> BAC10 </span>
+                          <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                          <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <!-- color of product-->
+                            <div class="flex-container2">
+                          <div class="circle1"></div>
+                          <div class="circle2"></div>
+                          <div class="circle3"></div>
+                          </div>
+                          <!--Cost of product-->
+                          <span class="shop-item-price"> $285 </span><br>
+                          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                      </div>
+                      </div>
+                     </div>
+                    </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">12 / 16</div>
+                    <div class="flex-container">
+                        <div style="flex-basis: 3000px;">
+                            <img class="shop-item-image" src="images/15.png" style="width: 100%">
+                      </div>
+                      <!--caption text and flex box-->
+                      <div style="flex-shrink: 1">
+                      <div class="caption-container">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                          <!--name and description of product-->
+                          <span class="shop-item-title"> BAC11 </span>
+                          <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                          <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <!-- color of product-->
+                            <div class="flex-container2">
+                          <div class="circle1"></div>
+                          <div class="circle2"></div>
+                          <div class="circle3"></div>
+                          </div>
+                          <!--Cost of product-->
+                          <span class="shop-item-price"> $99 </span><br>
+                          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                      </div>
+                      </div>
+                     </div>
+                    </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">13 / 16</div>
+                    <div class="flex-container">
+                        <div style="flex-basis: 3000px;">
+                            <img class="shop-item-image" src="images/7.png" style="width: 100%">
+                      </div>
+                      <!--caption text and flex box-->
+                      <div style="flex-shrink: 1">
+                      <div class="caption-container">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                          <!--name and description of product-->
+                          <span class="shop-item-title"> BAC12 </span>
+                          <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                          <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <!-- color of product-->
+                            <div class="flex-container2">
+                          <div class="circle1"></div>
+                          <div class="circle2"></div>
+                          <div class="circle3"></div>
+                          </div>
+                          <!--Cost of product-->
+                          <span class="shop-item-price"> $320 </span><br>
+                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                      </div>
+                      </div>
+                     </div>
+                    </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">14 / 16</div>
+                    <div class="flex-container">
+                        <div style="flex-basis: 3000px;">
+                            <img class="shop-item-image" src="images/17.png" style="width: 100%">
+                      </div>
+                      <!--caption text and flex box-->
+                      <div style="flex-shrink: 1">
+                       <div class="caption-container">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                          <!--name and description of product-->
+                          <span class="shop-item-title"> BAC13 </span>
+                          <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                          <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <!-- color of product-->
+                            <div class="flex-container2">
+                          <div class="circle1"></div>
+                          <div class="circle2"></div>
+                          <div class="circle3"></div>
+                          </div>
+                          <!--Cost of product-->
+                          <span class="shop-item-price"> $700 </span><br>
+                          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">15 / 16</div>
+                     <div class="flex-container">
+                        <div style="flex-basis: 3000px;">
+                            <img class="shop-item-image" src="images/15.png" style="width: 100%">
+                      </div>
+                      <!--caption text and flex box-->
+                      <div style="flex-shrink: 1">
+                       <div class="caption-container">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                          <!--name and description of product-->
+                          <span class="shop-item-title"> BAC4 </span>
+                          <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                          <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <!-- color of product-->
+                            <div class="flex-container2">
+                          <div class="circle1"></div>
+                          <div class="circle2"></div>
+                          <div class="circle3"></div>
+                          </div>
+                          <!--Cost of product-->
+                          <span class="shop-item-price"> $499 </span><br>
+                          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                      </div>
+                      </div>
+                     </div>
+                    </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">16 / 16</div>
+                     <div class="flex-container">
+                        <div style="flex-basis: 3000px;">
+                            <img class="shop-item-image" src="images/16.png" style="width: 100%">
+                      </div>
+                      <!--caption text and flex box-->
+                       <div style="flex-shrink: 1">
+                     <div class="caption-container">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                          <!--name and description of product-->
+                          <span class="shop-item-title"> BAC15 </span>
+                            <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                          <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <!-- color of product-->
+                            <div class="flex-container2">
+                          <div class="circle1"></div>
+                          <div class="circle2"></div>
+                          <div class="circle3"></div>
+                          </div>
+                          <!--Cost of product-->
+                          <span class="shop-item-price"> $549 </span><br>
+                          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                      </div>
+                      </div>
+                     </div>
+                    </div>
+                  </div>
+                </div>
+               </div>
+              </div>
+            </div>
+    </div>
+</div>
+<div id="content_2" class="tabcontent" style="display:none;">
+	<div class="container">
+    	<div class="row">
+                <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+                        <div class="MultiCarousel-inner">
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center;"><img src="images/5.png" width="100%"
+                                        onclick="openModal();currentSlide(1)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 549</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/7.png" width="100%;"
+                                        onclick="openModal();currentSlide(2)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC1</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 499</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/6.png" width="100%"
+                                        onclick="openModal();currentSlide(3)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC2</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 700</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/14.png" width="100%"
+                                        onclick="openModal();currentSlide(4)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC3</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 320</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/6.png" width="100%"
+                                        onclick="openModal();currentSlide(5)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC4</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 99</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/1.png" width="100%"
+                                        onclick="openModal();currentSlide(6)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC5</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 285</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/15.png" width="100%"
+                                        onclick="openModal();currentSlide(7)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC6</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 429</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/17.png" width="100%"
+                                        onclick="openModal();currentSlide(8)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC7</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 379</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/18.png" width="100%"
+                                        onclick="openModal();currentSlide(9)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC8</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 499</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/1.png" width="100%"
+                                        onclick="openModal();currentSlide(10)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC9</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 250</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                  <div class="pad15">
+                                    <div style="text-align: center"><img src="images/16.png" width="100%"
+                                        onclick="openModal();currentSlide(11)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC10</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 199</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/15.png" width="100%"
+                                        onclick="openModal();currentSlide(12)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC11</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 350</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/1.png" width="100%"
+                                        onclick="openModal();currentSlide(13)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC12</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 299</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/5.png" width="100%"
+                                        onclick="openModal();currentSlide(14)" class="hover-shadow" /></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC13</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 499</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/6.png" width="100%"
+                                        onclick="openModal();currentSlide(15)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC14</p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 350</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="pad15">
+                                    <div style="text-align: center"><img src="images/7.png" width="100%"
+                                        onclick="openModal();currentSlide(16)" class="hover-shadow"/></div>
+                                    <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC15/p>
+                                    <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                    <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 299</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-dangerer leftLst"> < </button>
+                        <button class="btn btn-dangerer rightLst">></button>
+                    </div>
+                 </div>
+                 <div id="myModal" class="modal">
+                        <span class="close cursor" onclick="closeModal()">&times;</span>
+                        <div class="modal-content">
+                           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                           <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                          <div class="mySlides">
+                            <div class="numbertext">1 / 16</div>
+                            <!--flex box-->
+                            <div class="flex-container">
+                              <div style="flex-basis: 3000px;">
+                                  <img class="shop-item-image" src="images/4.png" style="width: 100%">
+                            </div>
+                            <!--caption text and flex box-->
+                            <div style="flex-shrink: 1">
+                            <div class="caption-container">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                              <!--name and description of product-->
+                              <span class="shop-item-title"> BAC </span>
+                              <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                              <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <!-- color of product-->
+                                <div class="flex-container2">
+                              <div class="circle1"></div>
+                              <div class="circle2"></div>
+                              <div class="circle3"></div>
+                              </div>
+                              <!--Cost of product-->
+                              <span class="shop-item-price"> $549 </span><br>
+                              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+
+                            </div>
+                            </div>
+                           </div>
+                          </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">2 / 16</div>
+                            <div class="flex-container">
+                                <div style="flex-basis: 3000px;">
+                                    <img class="shop-item-image" src="images/7.png" style="width: 100%">
+                              </div>
+                              <!--caption text and flex box-->
+                              <div style="flex-shrink: 1">
+                              <div class="caption-container">
+                                  <br>
+                                  <br>
+                                  <br>
+                                  <br>
+                                <!--name and description of product-->
+                                <span class="shop-item-title"> BAC1 </span>
+                                <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                  sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                  <!-- color of product-->
+                                  <div class="flex-container2">
+                                <div class="circle1"></div>
+                                <div class="circle2"></div>
+                                <div class="circle3"></div>
+                                </div>
+                                <!--Cost of product-->
+                                <span class="shop-item-price"> $499 </span><br>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                              </div>
+                              </div>
+                             </div>
+                            </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">3 / 16</div>
+                            <div class="flex-container">
+                                    <div style="flex-basis: 3000px;">
+                                        <img class="shop-item-image" src="images/8.png" style="width: 100%">
+                                       </div>
+                                       <!--caption text and flex box-->
+                                       <div style="flex-shrink: 1">
+                                       <div class="caption-container">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                              <!--name and description of product-->
+                              <span class="shop-item-title"> BAC2 </span>
+                              <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                              <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <!-- color of product-->
+                                <div class="flex-container2">
+                              <div class="circle1"></div>
+                              <div class="circle2"></div>
+                              <div class="circle3"></div>
+                              </div>
+                              <!--Cost of product-->
+                              <span class="shop-item-price"> $600 </span><br>
+                              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                              </div>
+                              </div>
+                             </div>
+                            </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">4 / 16</div>
+                            <div class="flex-container">
+                                    <div style="flex-basis: 3000px;">
+                                        <img class="shop-item-image" src="9.png" style="width: 100%">
+                                       </div>
+                                       <!--caption text and flex box-->
+                                       <div style="flex-shrink: 1">
+                                       <div class="caption-container">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                  <!--name and description of product-->
+                                  <span class="shop-item-title"> BAC </span>
+                                  <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                  <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <!-- color of product-->
+                                    <div class="flex-container2">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  </div>
+                                  <!--Cost of product-->
+                                  <span class="shop-item-price"> $332 </span><br>
+                                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                              </div>
+                              </div>
+                             </div>
+                            </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">5 / 16</div>
+                            <div class="flex-container">
+                                    <div style="flex-basis: 3000px;">
+                                            <img class="shop-item-image" src="6.png" style="width: 100%">
+                                       </div>
+                                       <!--caption text and flex box-->
+                                       <div style="flex-shrink: 1">
+                                       <div class="caption-container">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                  <!--name and description of product-->
+                                  <span class="shop-item-title"> BAC </span>
+                                  <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                  <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <!-- color of product-->
+                                    <div class="flex-container2">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  </div>
+                                  <!--Cost of product-->
+                                  <span class="shop-item-price"> $532 </span><br>
+                                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                              </div>
+                              </div>
+                             </div>
+                            </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">6 / 16</div>
+                            <div class="flex-container">
+                                    <div style="flex-basis: 3000px;">
+                                        <img class="shop-item-image" src="1.png" style="width: 100%">
+                                       </div>
+                                       <!--caption text and flex box-->
+                                       <div style="flex-shrink: 1">
+                                       <div class="caption-container">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                  <!--name and description of product-->
+                                  <span class="shop-item-title"> BAC </span>
+                                  <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                  <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <!-- color of product-->
+                                    <div class="flex-container2">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  </div>
+                                  <!--Cost of product-->
+                                  <span class="shop-item-price"> $753 </span><br>
+                                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                              </div>
+                              </div>
+                             </div>
+                            </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">7 / 16</div>
+                            <div class="flex-container">
+                                    <div style="flex-basis: 3000px;">
+                                        <img class="shop-item-image" src="2.png" style="width: 100%">
+                                       </div>
+                                       <!--caption text and flex box-->
+                                       <div style="flex-shrink: 1">
+                                       <div class="caption-container">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                  <!--name and description of product-->
+                                  <span class="shop-item-title"> BAC </span>
+                                  <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                  <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <!-- color of product-->
+                                    <div class="flex-container2">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  </div>
+                                  <!--Cost of product-->
+                                  <span class="shop-item-price"> $9990 </span><br>
+                                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                              </div>
+                              </div>
+                             </div>
+                            </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">8 / 16</div>
+                            <div class="flex-container">
+                                    <div style="flex-basis: 3000px;">
+                                        <img class="shop-item-image" src="11.png" style="width: 100%">
+                                       </div>
+                                       <!--caption text and flex box-->
+                                       <div style="flex-shrink: 1">
+                                       <div class="caption-container">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                  <!--name and description of product-->
+                                  <span class="shop-item-title"> BAC </span>
+                                  <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                  <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <!-- color of product-->
+                                    <div class="flex-container2">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  </div>
+                                  <!--Cost of product-->
+                                  <span class="shop-item-price"> $9990 </span><br>
+                                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                              </div>
+                              </div>
+                             </div>
+                            </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">9 / 16</div>
+                            <div class="flex-container">
+                                    <div style="flex-basis: 3000px;">
+                                        <img class="shop-item-image" src="18.png" style="width: 100%">
+                                       </div>
+                                       <!--caption text and flex box-->
+                                       <div style="flex-shrink: 1">
+                                       <div class="caption-container">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                  <!--name and description of product-->
+                                  <span class="shop-item-title"> BAC </span>
+                                  <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                  <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <!-- color of product-->
+                                    <div class="flex-container2">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  </div>
+                                  <!--Cost of product-->
+                                  <span class="shop-item-price"> $9990 </span><br>
+                                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                              </div>
+                              </div>
+                             </div>
+                            </div>
+
+                            <div class="mySlides">
+                              <div class="numbertext">10 / 16</div>
+                              <div class="flex-container">
+                                      <div style="flex-basis: 3000px;">
+                                          <img class="shop-item-image" src="17.png" style="width: 100%">
+                                         </div>
+                                         <!--caption text and flex box-->
+                                         <div style="flex-shrink: 1">
+                                         <div class="caption-container">
+                                      <br>
+                                      <br>
+                                      <br>
+                                      <br>
+                                    <!--name and description of product-->
+                                    <span class="shop-item-title"> BAC </span>
+                                    <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                    <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                      sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                      <!-- color of product-->
+                                      <div class="flex-container2">
+                                    <div class="circle1"></div>
+                                    <div class="circle2"></div>
+                                    <div class="circle3"></div>
+                                    </div>
+                                    <!--Cost of product-->
+                                    <span class="shop-item-price"> $9990 </span><br>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                                </div>
+                               </div>
+                              </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">11 / 16</div>
+                            <div class="flex-container">
+                                    <div style="flex-basis: 3000px;">
+                                        <img class="shop-item-image" src="16.png" style="width: 100%">
+                                       </div>
+                                       <!--caption text and flex box-->
+                                       <div style="flex-shrink: 1">
+                                       <div class="caption-container">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                  <!--name and description of product-->
+                                  <span class="shop-item-title"> BAC </span>
+                                  <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                  <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <!-- color of product-->
+                                    <div class="flex-container2">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  </div>
+                                  <!--Cost of product-->
+                                  <span class="shop-item-price"> $9990 </span><br>
+                                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                              </div>
+                              </div>
+                             </div>
+                            </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">12 / 16</div>
+                            <div class="flex-container">
+                                <div style="flex-basis: 3000px;">
+                                    <img class="shop-item-image" src="15.png" style="width: 100%">
+                              </div>
+                              <!--caption text and flex box-->
+                              <div style="flex-shrink: 1">
+                              <div class="caption-container">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                  <!--name and description of product-->
+                                  <span class="shop-item-title"> BAC </span>
+                                  <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                  <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <!-- color of product-->
+                                    <div class="flex-container2">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  </div>
+                                  <!--Cost of product-->
+                                  <span class="shop-item-price"> $9990 </span><br>
+                                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                              </div>
+                              </div>
+                             </div>
+                            </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">13 / 16</div>
+                            <div class="flex-container">
+                                <div style="flex-basis: 3000px;">
+                                    <img class="shop-item-image" src="1.png" style="width: 100%">
+                              </div>
+                              <!--caption text and flex box-->
+                              <div style="flex-shrink: 1">
+                              <div class="caption-container">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                  <!--name and description of product-->
+                                  <span class="shop-item-title"> BAC </span>
+                                  <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                  <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <!-- color of product-->
+                                    <div class="flex-container2">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  </div>
+                                  <!--Cost of product-->
+                                  <span class="shop-item-price"> $9990 </span><br>
+                              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                              </div>
+                              </div>
+                             </div>
+                            </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">14 / 16</div>
+                            <div class="flex-container">
+                                <div style="flex-basis: 3000px;">
+                                    <img class="shop-item-image" src="12.png" style="width: 100%">
+                              </div>
+                              <!--caption text and flex box-->
+                              <div style="flex-shrink: 1">
+                               <div class="caption-container">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                  <!--name and description of product-->
+                                  <span class="shop-item-title"> BAC </span>
+                                  <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                  <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <!-- color of product-->
+                                    <div class="flex-container2">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  </div>
+                                  <!--Cost of product-->
+                                  <span class="shop-item-price"> $9990 </span><br>
+                                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                               </div>
+                              </div>
+                             </div>
+                            </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">15 / 16</div>
+                             <div class="flex-container">
+                                <div style="flex-basis: 3000px;">
+                                    <img class="shop-item-image" src="13.png" style="width: 100%">
+                              </div>
+                              <!--caption text and flex box-->
+                              <div style="flex-shrink: 1">
+                               <div class="caption-container">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                  <!--name and description of product-->
+                                  <span class="shop-item-title"> BAC </span>
+                                  <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                  <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <!-- color of product-->
+                                    <div class="flex-container2">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  </div>
+                                  <!--Cost of product-->
+                                  <span class="shop-item-price"> $9990 </span><br>
+                                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                              </div>
+                              </div>
+                             </div>
+                            </div>
+
+                          <div class="mySlides">
+                            <div class="numbertext">16 / 16</div>
+                             <div class="flex-container">
+                                <div style="flex-basis: 3000px;">
+                                    <img class="shop-item-image" src="14.png" style="width: 100%">
+                              </div>
+                              <!--caption text and flex box-->
+                               <div style="flex-shrink: 1">
+                             <div class="caption-container">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                  <!--name and description of product-->
+                                  <span class="shop-item-title"> BAC </span>
+                                    <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                  <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <!-- color of product-->
+                                    <div class="flex-container2">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  </div>
+                                  <!--Cost of product-->
+                                  <span class="shop-item-price"> $9990 </span><br>
+                                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                              </div>
+                              </div>
+                             </div>
+                            </div>
+                          </div>
+                        </div>
+                       </div>
+                      </div>
+                    </div>
+      <div id="content_3" class="tabcontent" style="display:none;">
+        <div class="container">
+          	<div class="row">
+                    <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+                            <div class="MultiCarousel-inner">
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div style="text-align: center;"><img src="images/14.png" width="100%"
+                                            onclick="openModal();currentSlide(1)" class="hover-shadow" /></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 499</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div style="text-align: center"><img src="images/15.png" width="100%;"
+                                            onclick="openModal();currentSlide(2)" class="hover-shadow" /></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC1</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 250</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div style="text-align: center"><img src="images/16.png" width="100%"
+                                            onclick="openModal();currentSlide(3)" class="hover-shadow" /></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC2</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 199</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div style="text-align: center"><img src="images/1.png" width="100%"
+                                            onclick="openModal();currentSlide(4)" class="hover-shadow"/></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC3</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 350</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div style="text-align: center"><img src="images/15.png" width="100%"
+                                            onclick="openModal();currentSlide(5)" class="hover-shadow" /></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC4</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 299</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div style="text-align: center"><img src="images/16.png" width="100%"
+                                            onclick="openModal();currentSlide(6)" class="hover-shadow" /></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC5</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 499</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div style="text-align: center"><img src="images/17.png" width="100%"
+                                            onclick="openModal();currentSlide(7)" class="hover-shadow"/></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC6</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 350</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div style="text-align: center"><img src="images/18.png" width="100%"
+                                            onclick="openModal();currentSlide(8)" class="hover-shadow"/></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC7</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 299</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div style="text-align: center"><img src="images/11.png" width="100%"
+                                            onclick="openModal();currentSlide(9)" class="hover-shadow" /></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC8</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 549</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div style="text-align: center"><img src="images/5.png" width="100%"
+                                            onclick="openModal();currentSlide(10)" class="hover-shadow"/></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC9</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 499</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                      <div class="pad15">
+                                        <div style="text-align: center"><img src="images/1.png" width="100%"
+                                            onclick="openModal();currentSlide(11)" class="hover-shadow"/></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC10</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 700</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div style="text-align: center"><img src="images/6.png" width="100%"
+                                            onclick="openModal();currentSlide(12)" class="hover-shadow"/></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC11</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 320</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div style="text-align: center"><img src="images/14.png" width="100%"
+                                            onclick="openModal();currentSlide(13)" class="hover-shadow" /></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC12</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 99</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div style="text-align: center"><img src="images/15.png" width="100%"
+                                            onclick="openModal();currentSlide(14)" class="hover-shadow" /></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC13</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 285</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div style="text-align: center"><img src="iamges/7.png" width="100%"
+                                            onclick="openModal();currentSlide(15)" class="hover-shadow"/></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC14</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 429</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div style="text-align: center"><img src="images/18.png" width="100%"
+                                            onclick="openModal();currentSlide(16)" class="hover-shadow"/></div>
+                                        <p style="font-family:'Arimo';font-size:16px; font-weight:bold;">BAC15</p>
+                                        <p style="font-family:'Arimo';font-size:14px;">Sofas &amp; Armchairs </p>
+                                        <p style="font-family:'Montserrat';font-size:16px; font-weight:bold;">&#36; 379</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-dangerer leftLst"> < </button>
+                            <button class="btn btn-dangerer rightLst">></button>
+                        </div>
+                     </div>
+                     <div id="myModal" class="modal">
+                            <span class="close cursor" onclick="closeModal()">&times;</span>
+                            <div class="modal-content">
+                               <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                               <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                              <div class="mySlides">
+                                <div class="numbertext">1 / 16</div>
+                                <!--flex box-->
+                                <div class="flex-container">
+                                  <div style="flex-basis: 3000px;">
+                                      <img class="shop-item-image" src="14.png" style="width: 100%">
+                                </div>
+                                <!--caption text and flex box-->
+                                <div style="flex-shrink: 1">
+                                <div class="caption-container">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                  <!--name and description of product-->
+                                  <span class="shop-item-title"> BAC </span>
+                                  <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                  <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <!-- color of product-->
+                                    <div class="flex-container2">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  </div>
+                                  <!--Cost of product-->
+                                  <span class="shop-item-price"> $9990 </span><br>
+                                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+
+                                </div>
+                                </div>
+                               </div>
+                              </div>
+
+                              <div class="mySlides">
+                                <div class="numbertext">2 / 16</div>
+                                <div class="flex-container">
+                                    <div style="flex-basis: 3000px;">
+                                        <img class="shop-item-image" src="13.png" style="width: 100%">
+                                  </div>
+                                  <!--caption text and flex box-->
+                                  <div style="flex-shrink: 1">
+                                  <div class="caption-container">
+                                      <br>
+                                      <br>
+                                      <br>
+                                      <br>
+                                    <!--name and description of product-->
+                                    <span class="shop-item-title"> BAC </span>
+                                    <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                    <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                      sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                      <!-- color of product-->
+                                      <div class="flex-container2">
+                                    <div class="circle1"></div>
+                                    <div class="circle2"></div>
+                                    <div class="circle3"></div>
+                                    </div>
+                                    <!--Cost of product-->
+                                    <span class="shop-item-price"> $9990 </span><br>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                  </div>
+                                  </div>
+                                 </div>
+                                </div>
+
+                              <div class="mySlides">
+                                <div class="numbertext">3 / 16</div>
+                                <div class="flex-container">
+                                        <div style="flex-basis: 3000px;">
+                                            <img class="shop-item-image" src="12.png" style="width: 100%">
+                                           </div>
+                                           <!--caption text and flex box-->
+                                           <div style="flex-shrink: 1">
+                                           <div class="caption-container">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                  <!--name and description of product-->
+                                  <span class="shop-item-title"> BAC </span>
+                                  <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                  <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <!-- color of product-->
+                                    <div class="flex-container2">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  </div>
+                                  <!--Cost of product-->
+                                  <span class="shop-item-price"> $9990 </span><br>
+                                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                  </div>
+                                  </div>
+                                 </div>
+                                </div>
+
+                              <div class="mySlides">
+                                <div class="numbertext">4 / 16</div>
+                                <div class="flex-container">
+                                        <div style="flex-basis: 3000px;">
+                                            <img class="shop-item-image" src="1.png" style="width: 100%">
+                                           </div>
+                                           <!--caption text and flex box-->
+                                           <div style="flex-shrink: 1">
+                                           <div class="caption-container">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                      <!--name and description of product-->
+                                      <span class="shop-item-title"> BAC </span>
+                                      <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                      <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <!-- color of product-->
+                                        <div class="flex-container2">
+                                      <div class="circle1"></div>
+                                      <div class="circle2"></div>
+                                      <div class="circle3"></div>
+                                      </div>
+                                      <!--Cost of product-->
+                                      <span class="shop-item-price"> $9990 </span><br>
+                                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                  </div>
+                                  </div>
+                                 </div>
+                                </div>
+
+                              <div class="mySlides">
+                                <div class="numbertext">5 / 16</div>
+                                <div class="flex-container">
+                                        <div style="flex-basis: 3000px;">
+                                                <img class="shop-item-image" src="15.png" style="width: 100%">
+                                           </div>
+                                           <!--caption text and flex box-->
+                                           <div style="flex-shrink: 1">
+                                           <div class="caption-container">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                      <!--name and description of product-->
+                                      <span class="shop-item-title"> BAC </span>
+                                      <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                      <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <!-- color of product-->
+                                        <div class="flex-container2">
+                                      <div class="circle1"></div>
+                                      <div class="circle2"></div>
+                                      <div class="circle3"></div>
+                                      </div>
+                                      <!--Cost of product-->
+                                      <span class="shop-item-price"> $9990 </span><br>
+                                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                  </div>
+                                  </div>
+                                 </div>
+                                </div>
+
+                              <div class="mySlides">
+                                <div class="numbertext">6 / 16</div>
+                                <div class="flex-container">
+                                        <div style="flex-basis: 3000px;">
+                                            <img class="shop-item-image" src="16.png" style="width: 100%">
+                                           </div>
+                                           <!--caption text and flex box-->
+                                           <div style="flex-shrink: 1">
+                                           <div class="caption-container">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                      <!--name and description of product-->
+                                      <span class="shop-item-title"> BAC </span>
+                                      <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                      <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <!-- color of product-->
+                                        <div class="flex-container2">
+                                      <div class="circle1"></div>
+                                      <div class="circle2"></div>
+                                      <div class="circle3"></div>
+                                      </div>
+                                      <!--Cost of product-->
+                                      <span class="shop-item-price"> $9990 </span><br>
+                                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                  </div>
+                                  </div>
+                                 </div>
+                                </div>
+
+                              <div class="mySlides">
+                                <div class="numbertext">7 / 16</div>
+                                <div class="flex-container">
+                                        <div style="flex-basis: 3000px;">
+                                            <img class="shop-item-image" src="17.png" style="width: 100%">
+                                           </div>
+                                           <!--caption text and flex box-->
+                                           <div style="flex-shrink: 1">
+                                           <div class="caption-container">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                      <!--name and description of product-->
+                                      <span class="shop-item-title"> BAC </span>
+                                      <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                      <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <!-- color of product-->
+                                        <div class="flex-container2">
+                                      <div class="circle1"></div>
+                                      <div class="circle2"></div>
+                                      <div class="circle3"></div>
+                                      </div>
+                                      <!--Cost of product-->
+                                      <span class="shop-item-price"> $9990 </span><br>
+                                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                  </div>
+                                  </div>
+                                 </div>
+                                </div>
+
+                              <div class="mySlides">
+                                <div class="numbertext">8 / 16</div>
+                                <div class="flex-container">
+                                        <div style="flex-basis: 3000px;">
+                                            <img class="shop-item-image" src="18.png" style="width: 100%">
+                                           </div>
+                                           <!--caption text and flex box-->
+                                           <div style="flex-shrink: 1">
+                                           <div class="caption-container">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                      <!--name and description of product-->
+                                      <span class="shop-item-title"> BAC </span>
+                                      <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                      <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <!-- color of product-->
+                                        <div class="flex-container2">
+                                      <div class="circle1"></div>
+                                      <div class="circle2"></div>
+                                      <div class="circle3"></div>
+                                      </div>
+                                      <!--Cost of product-->
+                                      <span class="shop-item-price"> $9990 </span><br>
+                                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                  </div>
+                                  </div>
+                                 </div>
+                                </div>
+
+                              <div class="mySlides">
+                                <div class="numbertext">9 / 16</div>
+                                <div class="flex-container">
+                                        <div style="flex-basis: 3000px;">
+                                            <img class="shop-item-image" src="11.png" style="width: 100%">
+                                           </div>
+                                           <!--caption text and flex box-->
+                                           <div style="flex-shrink: 1">
+                                           <div class="caption-container">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                      <!--name and description of product-->
+                                      <span class="shop-item-title"> BAC </span>
+                                      <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                      <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <!-- color of product-->
+                                        <div class="flex-container2">
+                                      <div class="circle1"></div>
+                                      <div class="circle2"></div>
+                                      <div class="circle3"></div>
+                                      </div>
+                                      <!--Cost of product-->
+                                      <span class="shop-item-price"> $9990 </span><br>
+                                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                  </div>
+                                  </div>
+                                 </div>
+                                </div>
+
+                                <div class="mySlides">
+                                  <div class="numbertext">10 / 16</div>
+                                  <div class="flex-container">
+                                          <div style="flex-basis: 3000px;">
+                                              <img class="shop-item-image" src="2.png" style="width: 100%">
+                                             </div>
+                                             <!--caption text and flex box-->
+                                             <div style="flex-shrink: 1">
+                                             <div class="caption-container">
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                        <!--name and description of product-->
+                                        <span class="shop-item-title"> BAC </span>
+                                        <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                        <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                          sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                          <!-- color of product-->
+                                          <div class="flex-container2">
+                                        <div class="circle1"></div>
+                                        <div class="circle2"></div>
+                                        <div class="circle3"></div>
+                                        </div>
+                                        <!--Cost of product-->
+                                        <span class="shop-item-price"> $9990 </span><br>
+                                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                    </div>
+                                    </div>
+                                   </div>
+                                  </div>
+
+                              <div class="mySlides">
+                                <div class="numbertext">11 / 16</div>
+                                <div class="flex-container">
+                                        <div style="flex-basis: 3000px;">
+                                            <img class="shop-item-image" src="1.png" style="width: 100%">
+                                           </div>
+                                           <!--caption text and flex box-->
+                                           <div style="flex-shrink: 1">
+                                           <div class="caption-container">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                      <!--name and description of product-->
+                                      <span class="shop-item-title"> BAC </span>
+                                      <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                      <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <!-- color of product-->
+                                        <div class="flex-container2">
+                                      <div class="circle1"></div>
+                                      <div class="circle2"></div>
+                                      <div class="circle3"></div>
+                                      </div>
+                                      <!--Cost of product-->
+                                      <span class="shop-item-price"> $9990 </span><br>
+                                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                  </div>
+                                  </div>
+                                 </div>
+                                </div>
+
+                              <div class="mySlides">
+                                <div class="numbertext">12 / 16</div>
+                                <div class="flex-container">
+                                    <div style="flex-basis: 3000px;">
+                                        <img class="shop-item-image" src="6.png" style="width: 100%">
+                                  </div>
+                                  <!--caption text and flex box-->
+                                  <div style="flex-shrink: 1">
+                                  <div class="caption-container">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                      <!--name and description of product-->
+                                      <span class="shop-item-title"> BAC </span>
+                                      <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                      <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <!-- color of product-->
+                                        <div class="flex-container2">
+                                      <div class="circle1"></div>
+                                      <div class="circle2"></div>
+                                      <div class="circle3"></div>
+                                      </div>
+                                      <!--Cost of product-->
+                                      <span class="shop-item-price"> $9990 </span><br>
+                                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                  </div>
+                                  </div>
+                                 </div>
+                                </div>
+
+                              <div class="mySlides">
+                                <div class="numbertext">13 / 16</div>
+                                <div class="flex-container">
+                                    <div style="flex-basis: 3000px;">
+                                        <img class="shop-item-image" src="9.png" style="width: 100%">
+                                  </div>
+                                  <!--caption text and flex box-->
+                                  <div style="flex-shrink: 1">
+                                  <div class="caption-container">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                      <!--name and description of product-->
+                                      <span class="shop-item-title"> BAC </span>
+                                      <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                      <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <!-- color of product-->
+                                        <div class="flex-container2">
+                                      <div class="circle1"></div>
+                                      <div class="circle2"></div>
+                                      <div class="circle3"></div>
+                                      </div>
+                                      <!--Cost of product-->
+                                      <span class="shop-item-price"> $9990 </span><br>
+                                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                  </div>
+                                  </div>
+                                 </div>
+                                </div>
+
+                              <div class="mySlides">
+                                <div class="numbertext">14 / 16</div>
+                                <div class="flex-container">
+                                    <div style="flex-basis: 3000px;">
+                                        <img class="shop-item-image" src="8.png" style="width: 100%">
+                                  </div>
+                                  <!--caption text and flex box-->
+                                  <div style="flex-shrink: 1">
+                                   <div class="caption-container">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                      <!--name and description of product-->
+                                      <span class="shop-item-title"> BAC </span>
+                                      <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                      <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <!-- color of product-->
+                                        <div class="flex-container2">
+                                      <div class="circle1"></div>
+                                      <div class="circle2"></div>
+                                      <div class="circle3"></div>
+                                      </div>
+                                      <!--Cost of product-->
+                                      <span class="shop-item-price"> $9990 </span><br>
+                                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                   </div>
+                                  </div>
+                                 </div>
+                                </div>
+
+                              <div class="mySlides">
+                                <div class="numbertext">15 / 16</div>
+                                 <div class="flex-container">
+                                    <div style="flex-basis: 3000px;">
+                                        <img class="shop-item-image" src="7.png" style="width: 100%">
+                                  </div>
+                                  <!--caption text and flex box-->
+                                  <div style="flex-shrink: 1">
+                                   <div class="caption-container">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                      <!--name and description of product-->
+                                      <span class="shop-item-title"> BAC </span>
+                                      <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                      <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <!-- color of product-->
+                                        <div class="flex-container2">
+                                      <div class="circle1"></div>
+                                      <div class="circle2"></div>
+                                      <div class="circle3"></div>
+                                      </div>
+                                      <!--Cost of product-->
+                                      <span class="shop-item-price"> $9990 </span><br>
+                                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                  </div>
+                                  </div>
+                                 </div>
+                                </div>
+
+                              <div class="mySlides">
+                                <div class="numbertext">16 / 16</div>
+                                 <div class="flex-container">
+                                    <div style="flex-basis: 3000px;">
+                                        <img class="shop-item-image" src="4.png" style="width: 100%">
+                                  </div>
+                                  <!--caption text and flex box-->
+                                   <div style="flex-shrink: 1">
+                                 <div class="caption-container">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                      <!--name and description of product-->
+                                      <span class="shop-item-title"> BAC </span>
+                                        <p style="font-family: 'Libre baskerville'; font-size: 14.1px;"> Sofas & Armchairs</h2>
+                                      <p id="caption"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <!-- color of product-->
+                                        <div class="flex-container2">
+                                      <div class="circle1"></div>
+                                      <div class="circle2"></div>
+                                      <div class="circle3"></div>
+                                      </div>
+                                      <!--Cost of product-->
+                                      <span class="shop-item-price"> $9990 </span><br>
+                                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                  </div>
+                                  </div>
+                                 </div>
+                                </div>
+                              </div>
+                            </div>
+                           </div>
+                          </div>
+                        </div>
+  </ul>
+</section>
+<section class="container content-section">
+    <h2 class="section-header">CART</h2>
+    <div class="cart-row">
+        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span class="cart-price cart-header cart-column">PRICE</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+    </div>
+    <div class="cart-items">
+    </div>
+    <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price">$0</span>
+    </div>
+    <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+</section>
+
+	<div class="row">
+	    <div class="col-md-12 text-center">
+	        <br/><br/><br/>
+	        <hr/>
+	        <p style="font-size:16px; font-weight:bold;">We have done all of the homework to ensure your display is safe and that your property stays shining bright throughout the holiday season.
+            You will immediately notice the difference in our products as we go to great lengths to ensure that only the very best products are used on your property.</p>
+          <p>Consistency from Season to Season</p>
+          <p>Energy Friendly LED Lights</p>
+          <p>Super-Bright Bulbs</p>
+          <p>Property-Friendly Fasteners</p>
+          <p>Lush, Realistic Greenery (Lit & Unlit)</p>
+          <p>Safe, Commercial-Grade Electrical Components</p>
+          <p>UL-Rated, Outdoor Extension Cords</p>
+	    </div>
+	</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<footer class="footer">
+  <div class="footer_content">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="footer_logo text-center"><a href="#"><a style="font-family: 'Arimo';font-size: 34px; font-weight: bold; color:#DA2352;">CHRISTMAS<span style="color:black;">Decor</span></a></a></div>
+        </div>
+      </div>
+      <div class="row footer_row">
+        <div class="col-lg-4 footer_col">
+          <div class="footer_item text-center">
+            <div class="footer_icon d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+              <div><img src="images/phone.png" alt=""></div>
+            </div>
+            <div class="footer_title">talk to us</div>
+            <div class="footer_list">
+              <ul>
+                <li>+34 5667 4332 244</li>
+                <li>+224 667 889</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 footer_col">
+          <div class="footer_item text-center">
+            <div class="footer_icon d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+              <div><img src="images/mail.png" alt=""></div>
+            </div>
+            <div class="footer_title">e-mail</div>
+            <div class="footer_list">
+              <ul>
+                <li>Contact@christmasdecor.com</li>
+                <li>office@christmasdecor.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 footer_col">
+          <div class="footer_item text-center">
+            <div class="footer_icon d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+              <div><img src="images/contact.png" alt=""></div>
+            </div>
+            <div class="footer_title">location</div>
+            <div class="footer_list">
+              <ul>
+                <li>350-1102,1-chome-1-13-1 Matobakita</li>
+                <li>Kawagoe-shi, Saitama-ken</li>
+                <li>Japan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

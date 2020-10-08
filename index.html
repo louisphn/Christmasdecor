@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Christmasdecor</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link href="http://allfont.net/allfont.css?fonts=league-spartan" rel="stylesheet" type="text/css" />
+ <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+ <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Sportify template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+</head>
+<style>
+.cta {height:50%;}
+.cta {background-color:#f8edcc;}
+.footer {background:white;}
+.footer_list > ul li {color:black;}
+.footer_title {color:	#DA2352;}
+.home_slider_container{height:85%;}
+.intro_box:first-child {
+    background: #c48ca0;
+}
+.intro_box:nth-child(2) {
+    background: #ac271e;
+}
+.intro_box:nth-child(3) {
+    background: #4d604f;
+}
+.home_slider .owl-dots .owl-dot.active {
+  background:#ac271e;
+}
+
+.topnav {
+  width:100%;
+  background-color: white;
+  overflow: hidden;
+  position:fixed;
+  z-index:9999;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+.topnav div a{
+  margin-top:2%;
+}
+/* Change the color of links on hover */
+.topnav div a:hover {
+  background-color: #954535;
+  color: white;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #954535;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  margin-top:20%;
+  display: none;
+}
+
+@media screen and (max-width: 1038px) {
+  .topnav div a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1038px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0%;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    margin:0;
+  }
+}
+/*portfolio*/
+.portfolio {
+  margin-right: 10px;
+  width: 100%;
+  height: 350px;
+  max-height: 30%;
+  background-color: #954535;
+  display: flex;
+  align-content: space-between;
+  justify-content: space-evenly;
+  text-align: center;
+}
+img.one {
+  height: 100%;
+  width: 130%;
+}
+
+img.two {
+  height: 100%;
+  width: 100%;
+}
+a:hover {
+color: grey;
+}
+</style>
+<body>
+	<div class="topnav" id="myTopnav">
+		<a href="index.html" style="font-family: 'Arimo';font-size: 34px; font-weight: bold; color:#954535;">CHRISTMAS<span style="color:black;">Decor</span></a>
+	<div style="float:right;">
+		<a href="index.html">HOME</a>
+		<a href="products.html">PRODUCTS</a>
+		<a href="service.html">SERVICES</a>
+		<a href="contact.html">CONTACT US</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+	</div>
+	<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<div class="super_container">
+
+
+	<!-- Home -->
+
+	<div class="home">
+
+		<!-- Slider -->
+		<div class="home_slider_container">
+			<div class="owl-carousel owl-theme home_slider">
+
+				<!-- Slide -->
+				<div class="slide">
+					<div class="background_image" style="background-image:url(images/img4.jpg); opacity:0.8;"></div>
+					<div class="slide_wrap d-flex flex-column align-items-start justify-content-center">
+						<div class="home_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div id="title1" class="home_content active">
+                      <div class="home_subtitle">Let Our Professional Holiday</div>
+                      <div class="home_title">
+                        <h1><span><span style="color:#ac271e; font-weight:bold;">Event</span> Decorators</span></h1>
+                        <h1>take the</h1>
+                        <h1>Hassle Out of Your <span style="color:#ac271e">Holidays</span></h1>
+											</div>
+											<div class="button home_button"><a href="#section2">read more</a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide -->
+				<div class="slide">
+					<div class="background_image" style="background-image:url(images/img6.jpg); opacity:0.4;"></div>
+					<div class="slide_wrap d-flex flex-column align-items-start justify-content-center">
+						<div class="home_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+                    	<div class="home_content">
+                        <div class="home_subtitle" style="font-size:36px; text-align:center; -webkit-filter: brightness(400%); color:#a8a7a7;">Take the time to enjoy your holidays and call on the professionals.</div>
+                    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+</div>
+				<!-- Slide -->
+				<div class="slide">
+					<div class="background_image" style="background-image:url(images/img7.jpg); opacity:0.8;"></div>
+					<div class="slide_wrap d-flex flex-column align-items-start justify-content-center">
+						<div class="home_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+                    <div class="home_content">
+                    <div id="buttonabc" class="button home_button" style="margin-top:20%; margin-left:40%;"><a href="products.html">Check It Out</a></div>
+										</div>
+                  </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+</div>
+</div>
+</div>
+
+	<!-- Intro -->
+
+	<div class="intro">
+		<div class="intro_boxes_wrap">
+			<div class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+
+				<!-- Intro Box -->
+				<div class="intro_box d-flex flex-column align-items-center justify-content-center text-center">
+					<div class="intro_box_icon"><img src="images/icon_1.svg" alt=""></div>
+					<div class="intro_box_title"><h3>PROFESSIONALISM</h3></div>
+					<div class="intro_box_text">
+						<p>Our professionalism is truly second to none and our decorators are well versed in the requirements of a world class holiday installation.</p>
+					</div>
+				</div>
+
+				<!-- Intro Box -->
+				<div class="intro_box d-flex flex-column align-items-center justify-content-center text-center">
+					<div class="intro_box_icon"><img src="images/icon_2.svg" alt=""></div>
+					<div class="intro_box_title"><h3>PREMIUM PRODUCT</h3></div>
+					<div class="intro_box_text">
+						<p>We have done all of the homework to ensure your display is safe and that your property stays shining bright throughout the holiday season. You will immediately notice the differene in our products as we go to great lenghts to ensure that only the very brest products are used on your property.</p>
+					</div>
+				</div>
+
+				<!-- Intro Box -->
+				<div class="intro_box d-flex flex-column align-items-center justify-content-center text-center">
+					<div class="intro_box_icon"><img src="images/icon_3.svg" alt=""></div>
+					<div class="intro_box_title"><h3>ALL-INCLUSIVE SERVICE</h3></div>
+					<div class="intro_box_text">
+						<p>Our goal is to create a “remarkable” holiday experience for you and your loved ones. From our design and installation to our pro-active maintenance to our removal and storage of the decorations, Christmas Decor is your best choice! We know you want your home decorated correctly, promptly and with the greatest attention to detail – that’s exactly how we work.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- About -->
+
+	<div class="about" id="section2">
+		<div class="container">
+			<div class="row">
+
+				<!-- About Content -->
+				<div class="col-lg-8">
+					<div class="about_content">
+						<div class="section_title_container">
+							<div class="section_subtitle">Professional Holiday Decorators</div>
+							<div class="section_title"><h1>About Us</h1></div>
+						</div>
+						<div class="about_text">
+							<p>For over 20 years, Christmas Decor professional holiday decorators have been brightening the Holiday Season for tens of thousands of highly satisfied customers. Our clients come to us for a professional, hassle-free experience, and enjoy brilliant results that give their property that special something for the holidays. As the premier holiday decorating and professional Christmas light installation company in North America, Christmas Decor Inc. provides our clients with captivating displays and exceptional service that are truly second to none.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- About Image -->
+				<div class="col-lg-4">
+					<div class="about_image"><img src="images/about.png" alt=""></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+  <div class="cta">
+    <div class="d-flex flex-xl-row flex-column align-items-start justify-content-start">
+
+      <!-- CTA Image -->
+      <div class="cta_image align-self-stretch">
+        <div class="background_image" style="background-image:url(images/img10.jpg)"></div>
+      </div>
+
+      <!-- CTA Content -->
+      <div class="cta_content">
+        <div class="section_title_container">
+          <div class="section_title"><h1 style="font-weight:bold; color:#b39f63;">why choose us</h1></div>
+        </div>
+        <div class="cta_list">
+          <ul>
+            <li class="d-flex flex-row align-items-center justify-content-start">
+              <span>The holiday season is a special time of year that is filled with the warmth of family, friends and memories.
+                 Professional decorative lighting and displays greatly enhance the special experience that comes from this joyous time. For over 30 years, the professional designers,
+                installers and staff of Christmas Decor have been a part of helping families and businesses create a magical experience for loved ones and clients.</span>
+            </li>
+            <li class="d-flex flex-row align-items-center justify-content-start">
+              <span>Our highly trained staff can provide the one stop solution,
+                 comprehensive service program you are looking for to turn your
+                  unique decorating needs into reality. We offer the best in design consultation, installation, maintenance and prompt take down services.
+                  The Christmas Décor team will work with you to design a display concept that will perfectly fit your goals and budget.</span>
+            </li>
+            <li class="d-flex flex-row align-items-center justify-content-start">
+              <span>We are proud of the thousands of residential and business
+                clients who come back to us nationwide throughout the year to
+                create the magic that a professional holiday or event lighting/display project can bring.</span>
+            </li>
+            <li class="d-flex flex-row align-items-center justify-content-start">
+              <span>Christmas light and display installation can be stressful.
+                Let us lift that burden so you can enjoy this special time of
+                year with family, friends and clients. Contact us today to learn
+                 more about how we can put some magic into your holiday season!</span>
+            </li>
+            <li class="d-flex flex-row align-items-center justify-content-start">
+              <span>Check out our following portfolios!</span>
+            </li>
+          </ul>
+        </div>
+        <div class="cta_buttons">
+          <div class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+            <div class="button cta_button"><a href="residental portfolio.html">Residential</a></div>
+            <div class="button cta_button"><a href="commercial portfolio.html">Commercial</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="footer_content">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="footer_logo text-center"><a href="#"><a style="font-family: 'Arimo';font-size: 34px; font-weight: bold; color:#DA2352;">CHRISTMAS<span style="color:black;">Decor</span></a></a></div>
+					</div>
+				</div>
+				<div class="row footer_row">
+					<div class="col-lg-4 footer_col">
+						<div class="footer_item text-center">
+							<div class="footer_icon d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+								<div><img src="images/phone.png" alt=""></div>
+							</div>
+							<div class="footer_title">talk to us</div>
+							<div class="footer_list">
+								<ul>
+									<li>+34 5667 4332 244</li>
+									<li>+224 667 889</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 footer_col">
+						<div class="footer_item text-center">
+							<div class="footer_icon d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+								<div><img src="images/mail.png" alt=""></div>
+							</div>
+							<div class="footer_title">e-mail</div>
+							<div class="footer_list">
+								<ul>
+									<li>Contact@christmasdecor.com</li>
+									<li>office@christmasdecor.com</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 footer_col">
+						<div class="footer_item text-center">
+							<div class="footer_icon d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+								<div><img src="images/contact.png" alt=""></div>
+							</div>
+							<div class="footer_title">location</div>
+							<div class="footer_list">
+								<ul>
+									<li>350-1102, 1-chome-1-13-1 Matobakita</li>
+									<li>Kawagoe-shi, Saitama-ken</li>
+                  <li>Japan</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<script src="a1.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="styles/bootstrap-4.1.2/popper.js"></script>
+<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="plugins/OwlCarousel2-2.3.4/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

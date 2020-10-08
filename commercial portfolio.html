@@ -1,0 +1,324 @@
+<!DOCTYPE html!>
+<html>
+<head>
+  <title>Commercial Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="http://allfont.net/allfont.css?fonts=league-spartan" rel="stylesheet" type="text/css" />
+   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+   <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+   <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+   <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+</head>
+<style>
+.footer {background:white;}
+.footer_list > ul li {color:black;}
+.footer_title {color:	#DA2352;}
+.topnav {
+  width:100%;
+  background-color: white;
+  overflow: hidden;
+  z-index:1;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+.topnav div a{
+  margin-top:2%;
+}
+/* Change the color of links on hover */
+.topnav div a:hover {
+  background-color: #954535;
+  color: white;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #954535;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  margin-top:20%;
+  display: none;
+}
+
+@media screen and (max-width: 1142px) {
+  .topnav div a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1142px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 5%;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    margin:0;
+  }
+}
+ h1 {
+text-align: center;
+color: #954535;
+font-size: 40px;
+padding-bottom:30px;
+font-family: Arimo;
+}
+p {
+  font-family: Arimo;
+  font-size: 17px;
+  text-align: justify;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+nav {width: cover;
+    mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+    margin: 0 auto;
+  }
+
+nav ul {
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  }
+
+nav ul li {
+    display: inline-block;
+  }
+
+nav ul li a {
+    padding: 18px;
+    font-family: "Open Sans";
+    text-transform:uppercase;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+  }
+
+nav ul li a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    color: beige;
+  }
+
+.active {background-color: 	#98aeb6;
+  color: white;}
+
+body {
+    font-family: Calluna, Arial, sans-serif;
+    min-height: 1000px;
+  }
+
+#columns {
+  	column-width: 320px;
+  	column-gap: 15px;
+    width: 90%;
+  	max-width: 1100px;
+  	margin: 50px auto;
+  }
+
+div#columns figure {
+  	background: #fefefe;
+  	border: 2px solid #fcfcfc;
+  	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  	margin: 0 2px 15px;
+  	padding: 15px;
+  	padding-bottom: 10px;
+  	transition: opacity .4s ease-in-out;
+    display: inline-block;
+    column-break-inside: avoid;
+  }
+
+div#columns figure img {
+  	width: 100%; height: auto;
+  	border-bottom: 1px solid #ccc;
+  	padding-bottom: 15px;
+  	margin-bottom: 5px;
+  }
+
+div#columns figure figcaption {
+    font-size: .9rem;
+  	color: #444;
+    line-height: 1.5;
+  }
+
+div#columns small {
+    font-size: 1rem;
+    float: right;
+    text-transform: uppercase;
+    color: #aaa;
+  }
+
+  div#columns small a {
+    color: #666;
+    text-decoration: none;
+    transition: .4s color;
+  }
+
+  div#columns:hover figure:not(:hover) {
+  	opacity: 0.5;
+  }
+
+  @media screen and (max-width: 750px) {
+    #columns { column-gap: 0px; }
+    #columns figure { width: 100%; }
+  }
+
+</style>
+
+<body>
+  <div class="topnav" id="myTopnav">
+		<a href="index.html" style="font-family: 'Arimo';font-size: 34px; font-weight: bold; color:#954535;">CHRISTMAS<span style="color:black;">Decor</span></a>
+	<div style="float:right;">
+		<a href="index.html">HOME</a>
+		<a href="products.html">PRODUCTS</a>
+		<a href="service.html">SERVICES</a>
+		<a href="contact.html">CONTACT US</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+	</div>
+<h1>Commercial Holiday Lights and Display Portfolio</h1>
+<p>Christmas Decor’s Professional Decorators can take your commercial space, retail strip mall location, restaurant, and store and transform it for the holidays.  Increase foot traffic, stand out from the competition, and get those holiday shoppers in the mood!
+
+Here are some examples of our professional holiday light installations in some commercial settings.</p>
+<div id="columns">
+  <figure>
+  <img src="images\c1.jpg">
+
+	</figure>
+
+	<figure>
+	<img src="images\c2.jpg">
+
+	</figure>
+
+  <figure>
+	<img src="images\c3.jpg">
+
+	</figure>
+
+	<figure>
+	<img src="images\c4.jpg">
+
+	</figure>
+
+   <figure>
+	 <img src="images\c5.jpg">
+
+	</figure>
+
+   <figure>
+	 <img src="images\c6.jpg">
+
+	</figure>
+
+	<figure>
+	<img src="images\c7.jpg">
+
+	</figure>
+
+   <figure>
+	<img src="images\c8.jpg">
+
+	</figure>
+
+    <figure>
+	<img src="images\c9.jpg">
+    <figcaption>scriptt</figcaption>
+	</figure>
+    <figure>
+  <img src="images\c10.jpg">
+
+  </figure>
+</div>
+<br>
+<footer class="footer">
+  <div class="footer_content">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="footer_logo text-center"><a href="#"><a style="font-family: 'Arimo';font-size: 34px; font-weight: bold; color:#DA2352;">CHRISTMAS<span style="color:black;">Decor</span></a></a></div>
+        </div>
+      </div>
+      <div class="row footer_row">
+        <div class="col-lg-4 footer_col">
+          <div class="footer_item text-center">
+            <div class="footer_icon d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+              <div><img src="images/phone.png" alt=""></div>
+            </div>
+            <div class="footer_title">talk to us</div>
+            <div class="footer_list">
+              <ul>
+                <li>+34 5667 4332 244</li>
+                <li>+224 667 889</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 footer_col">
+          <div class="footer_item text-center">
+            <div class="footer_icon d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+              <div><img src="images/mail.png" alt=""></div>
+            </div>
+            <div class="footer_title">e-mail</div>
+            <div class="footer_list">
+              <ul>
+                <li>Contact@christmasdecor.com</li>
+                <li>office@christmasdecor.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 footer_col">
+          <div class="footer_item text-center">
+            <div class="footer_icon d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+              <div><img src="images/contact.png" alt=""></div>
+            </div>
+            <div class="footer_title">location</div>
+            <div class="footer_list">
+              <ul>
+                <li>350-1102, 1-chōme-1-13-1 Matobakita</li>
+                <li>Kawagoe-shi, Saitama-ken</li>
+                <li>Japan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="a1.js"></script>
+</body>
+</html>

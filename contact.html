@@ -1,0 +1,266 @@
+<!DOCTYPE html!>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="http://allfont.net/allfont.css?fonts=league-spartan" rel="stylesheet" type="text/css" />
+   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+   <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="a1.js"></script>
+<!-- Include the above in your HEAD tag ---------->
+
+</head>
+<style>
+.topnav {
+  width:100%;
+  background-color: white;
+  overflow: hidden;
+  position:fixed;
+  z-index:1;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+.topnav div a{
+  margin-top:2%;
+}
+/* Change the color of links on hover */
+.topnav div a:hover {
+  background-color: #954535;
+  color: white;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #954535;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  margin-top:20%;
+  display: none;
+}
+
+@media screen and (max-width: 860px) {
+  .topnav div a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 860px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 5%;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    margin:0;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #954535;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #954535;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  padding: 10px;
+  max-width:90%;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 415px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+ form > a{
+   margin-left:-2%;
+ }
+}
+@media screen and (max-width: 700px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+ form > a{
+   margin-left:15%;
+ }
+}
+
+.topnav {
+  width:100%;
+  background-color: white;
+  overflow: hidden;
+  position:fixed;
+  z-index:1;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+.topnav div a{
+  margin-top:2%;
+}
+/* Change the color of links on hover */
+.topnav div a:hover {
+  background-color: #954535;
+  color: white;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #954535;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  margin-top:20%;
+  display: none;
+}
+
+@media screen and (max-width: 1038px) {
+  .topnav div a {display: none;}
+  .topnav a.icon {
+    float: left;
+    display: block;
+    top:-5%;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1038px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    margin:0;
+  }
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.fa:hover {text-decoration:none;}
+</style>
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" style="font-family: 'Arimo';font-size: 34px; font-weight: bold; color:#954535;">CHRISTMAS<span style="color:black;">Decor</span></a>
+  <div style="float:right;">
+    <a href="index.html">HOME</a>
+		<a href="products.html">PRODUCTS</a>
+		<a href="service.html">SERVICES</a>
+		<a href="contact.html">CONTACT US</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+<br>
+<Br>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+  <div style="color:black;">
+    <h2 style="font-weight:bold;">Drop Us A Line</h2>
+    <p>Swing by for a cup of coffee, or leave us a message:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <form method="post">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit" onclick="return foo();" />
+        <br>
+        <br>
+        <br>
+        <a href="#" class="fa fa-facebook" style="margin-right:5%; color:black; font-size:24px;"></a>
+        <a href="#" class="fa fa-twitter" style="margin-right:5%; color:black; font-size:24px;"></a>
+        <a href="#" class="fa fa-instagram" style="margin-right:5%; color:black; font-size:24px;"></a>
+      </form>
+    </div>
+    <div class="column">
+      <img src="images/img6.jpg" style="width:100%">
+    </div>
+  </div>
+</div>
+</body>
+</html>
